@@ -1,0 +1,25 @@
+server:
+  port: 8090
+
+spring:
+  main:
+    banner-mode: "off"
+
+  application:
+    name: csr
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/csr
+    username: postgresql
+    password: postgresql
+    driverClassName: org.postgresql.Driver
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+  springfox:
+    documentation:
+      enabled: true

@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  auction-postgres:
+    image: postgres:12.6
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_DB=auction
+      - POSTGRES_USER=postgresql
+      - POSTGRES_PASSWORD=postgresql
+    volumes:
+      - auction-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  auction-postgres-data:
