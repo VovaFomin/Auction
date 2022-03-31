@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+        "https://checkstyle.org/dtds/suppressions_1_1.dtd">
+<suppressions>
+    <!-- follow OAuth naming conventions-->
+    <suppress checks="AbbreviationAsWordInName" files=".*OAuth.*"/>
+    <suppress checks="AbbreviationAsWordInName"
+              files="Constants.java"
+              lines="5"/>
+</suppressions>
