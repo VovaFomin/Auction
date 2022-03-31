@@ -6,10 +6,10 @@ spring:
     banner-mode: "off"
 
   application:
-    name: csr
+    name: auction
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/csr
+    url: jdbc:postgresql://localhost:5433/auction
     username: postgresql
     password: postgresql
     driverClassName: org.postgresql.Driver
