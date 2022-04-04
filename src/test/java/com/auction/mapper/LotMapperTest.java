@@ -11,6 +11,7 @@ import com.auction.entity.Lot;
 import com.auction.mapper.lot.LotMapper;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 public class LotMapperTest {
@@ -36,5 +37,20 @@ public class LotMapperTest {
         Lot actualResult = LotMapper.instance.convert(lotDto);
 
         assertThat(actualResult).usingRecursiveComparison().isEqualTo(expected);
+    }
+
+    @Test
+    void convertListLotToListDto_PassListLot_GetCorrectListDto() {
+        Lot lotOne = getLot(START_TIME, END_TIME, 1L);
+        Lot lotTwo = getLot(START_TIME, END_TIME, 2L);
+        List<Lot> lots = List.of(lotOne, lotTwo);
+
+        LotDto lotDtoOne = getLotDto(START_TIME, END_TIME, 1L);
+        LotDto lotDtoTwo = getLotDto(START_TIME, END_TIME, 2L);
+        List<LotDto> expected = List.of(lotDtoOne, lotDtoTwo);
+
+        List<LotDto> actualResult = LotMapper.instance.convert(lots);
+
+        assertThat(actualResult).isEqualTo(expected);
     }
 }
