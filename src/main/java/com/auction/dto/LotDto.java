@@ -1,7 +1,7 @@
 package com.auction.dto;
 
+import com.auction.datetime.DateTimeDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDateTime;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -48,5 +48,5 @@ public class LotDto {
     @Max(value = Integer.MAX_VALUE)
     private Integer maxBidRateStep;
 
-    private LocalDateTime localDateTime;
+    private DateTimeDto lotDateTime;
 }
