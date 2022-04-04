@@ -32,6 +32,9 @@ public class Lot {
     @Column(name = "start_price")
     private Long startBid;
 
+    @Column(name = "max_bid_rate_step")
+    private Integer maxBidRateStep;
+
     @Column(name = "start_time")
     private LocalDateTime startDateTime;
 
