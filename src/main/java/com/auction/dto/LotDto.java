@@ -28,12 +28,6 @@ public class LotDto {
                                        + "numbers.")
     private String name;
 
-
-    /*
-    The character limit on the backend includes text formatting from the front
-    and this reduces the payload (800 characters), so we need to increase the
-    allowed limit on the backend to take this design into account.
-     */
     @Size(min = 1, max = 1600, message = "The Description field needs to be between 1 and 1600 "
                                          + "characters long and contain cyrillic symbols, latin "
                                          + "symbols, numbers and special symbols")
