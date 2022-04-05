@@ -1,4 +1,4 @@
-package com.auction.exception.lot;
+package com.auction.exception;
 
 public class LotNotFoundException extends RuntimeException {
 
