@@ -2,7 +2,7 @@ package com.auction.service.lot;
 
 import com.auction.dto.LotDto;
 import com.auction.entity.Lot;
-import com.auction.exception.lot.LotNotFoundException;
+import com.auction.exception.LotNotFoundException;
 import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;
 import java.util.List;
