@@ -3,7 +3,7 @@
         "https://checkstyle.org/dtds/suppressions_1_1.dtd">
 <suppressions>
     <!-- follow OAuth naming conventions-->
-    <suppress checks="AbbreviationAsWordInName" files=".*OAuth.*"/>
+    <suppress checks="AbbreviationAsWordInName" files=".*IT.*"/>
     <suppress checks="AbbreviationAsWordInName"
               files="Constants.java"
               lines="5"/>
