@@ -12,6 +12,7 @@ import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;
 import com.auction.service.lot.LotService;
 import com.auction.testinstance.TestInstance;
+import com.auction.validation.lot.LotValidator;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.Test;
@@ -28,6 +29,9 @@ public class LotServiceTest {
 
     @Mock
     private LotRepository lotRepository;
+
+    @Mock
+    private LotValidator lotValidator;
 
     @Test
     public void creteOne_createNewLot_LotIsCreatedSuccessfully() {
