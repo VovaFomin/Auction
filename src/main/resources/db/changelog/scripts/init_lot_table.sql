@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS lot (
     description text,
     start_price bigint,
     max_bid_rate_step bigint,
-    start_time  timestamp,
-    end_time    timestamp
+    start_time  timestamp DEFAULT now(),
+    end_time    timestamp DEFAULT now()
 );

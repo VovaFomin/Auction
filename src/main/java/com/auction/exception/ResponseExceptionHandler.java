@@ -25,7 +25,7 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         WebRequest request) {
 
         ApiError apiError = new ApiError();
-        List<String> errors = new ArrayList<String>();
+        List<String> errors = new ArrayList<>();
         for (FieldError error : exception.getBindingResult().getFieldErrors()) {
             errors.add(error.getDefaultMessage());
         }
