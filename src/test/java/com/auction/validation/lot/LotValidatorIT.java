@@ -9,6 +9,7 @@ import com.auction.dto.LotDto;
 import com.auction.exception.LotCannotBeCreatedOrChangedException;
 import com.auction.integration.controller.testcontainer.PostgreSqlContainer;
 import com.auction.repository.lot.LotRepository;
+import com.auction.repository.user.UserRepository;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -46,6 +47,9 @@ class LotValidatorIT {
 
     @MockBean
     private LotRepository lotRepository;
+
+    @MockBean
+    private UserRepository userRepository;
 
     @Container
     public static PostgreSqlContainer postgreSQLContainer = PostgreSqlContainer.getInstance();
