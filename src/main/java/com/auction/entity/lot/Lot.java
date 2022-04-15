@@ -1,4 +1,4 @@
-package com.auction.entity;
+package com.auction.entity.lot;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;

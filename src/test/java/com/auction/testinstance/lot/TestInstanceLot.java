@@ -1,19 +1,19 @@
-package com.auction.testinstance;
+package com.auction.testinstance.lot;
 
 import com.auction.datetime.DateTimeDto;
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class TestInstance {
+public class TestInstanceLot {
 
     private static final String LOT_NAME = "PowerBank";
     private static final String DESCRIPTION = "Extra power";
     private static final Long START_BID = 5L;
     private static final Integer MAX_BID_RATE_STEP = 20;
 
-    private TestInstance() {
+    private TestInstanceLot() {
         throw new UnsupportedOperationException();
     }
 

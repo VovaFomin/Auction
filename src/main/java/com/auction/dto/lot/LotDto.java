@@ -1,4 +1,4 @@
-package com.auction.dto;
+package com.auction.dto.lot;
 
 import com.auction.datetime.DateTimeDto;
 import com.fasterxml.jackson.annotation.JsonProperty;

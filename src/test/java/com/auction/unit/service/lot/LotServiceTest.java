@@ -6,12 +6,12 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;
 import com.auction.service.lot.LotService;
-import com.auction.testinstance.TestInstance;
+import com.auction.testinstance.lot.TestInstanceLot;
 import com.auction.validation.lot.LotValidator;
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public class LotServiceTest {
 
     @Test
     public void creteOne_createNewLot_LotIsCreatedSuccessfully() {
-        Lot lot = TestInstance.getLot(1L);
+        Lot lot = TestInstanceLot.getLot(1L);
         when(lotRepository.save(any(Lot.class))).thenReturn(lot);
 
         LotDto actualResult = lotService.createOne(LotMapper.instance.convert(lot));
@@ -45,7 +45,7 @@ public class LotServiceTest {
 
     @Test
     public void getLot_getLotById_LotReceivedSuccessfully() {
-        Lot lot = TestInstance.getLot(1L);
+        Lot lot = TestInstanceLot.getLot(1L);
         when(lotRepository.findById(1L)).thenReturn(Optional.of(lot));
 
         LotDto actualResult = lotService.getLot(1L);
@@ -56,8 +56,8 @@ public class LotServiceTest {
 
     @Test
     public void getAllLots_getAllLots_ReceivedAllLotsSuccessfully() {
-        Lot firstLot = TestInstance.getLot(1L);
-        Lot secondLot = TestInstance.getLot(2L);
+        Lot firstLot = TestInstanceLot.getLot(1L);
+        Lot secondLot = TestInstanceLot.getLot(2L);
         List<Lot> lotList = List.of(firstLot, secondLot);
         when(lotRepository.findAll()).thenReturn(lotList);
 
@@ -68,7 +68,7 @@ public class LotServiceTest {
 
     @Test
     public void deleteLot_deleteLotById_LotDeleteSuccessfully() {
-        Lot lot = TestInstance.getLot(1L);
+        Lot lot = TestInstanceLot.getLot(1L);
         when(lotRepository.findById(1L)).thenReturn(Optional.of(lot));
 
         lotService.deleteLot(1L);

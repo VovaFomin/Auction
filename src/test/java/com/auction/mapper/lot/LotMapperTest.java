@@ -1,14 +1,13 @@
-package com.auction.mapper;
+package com.auction.mapper.lot;
 
-import static com.auction.testinstance.TestInstance.getLot;
-import static com.auction.testinstance.TestInstance.getLotDto;
+import static com.auction.testinstance.lot.TestInstanceLot.getLot;
+import static com.auction.testinstance.lot.TestInstanceLot.getLotDto;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
-import com.auction.mapper.lot.LotMapper;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;

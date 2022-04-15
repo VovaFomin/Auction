@@ -1,6 +1,6 @@
 package com.auction.controller.lot;
 
-import com.auction.dto.LotDto;
+import com.auction.dto.lot.LotDto;
 import com.auction.service.lot.LotServiceProvider;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiResponse;

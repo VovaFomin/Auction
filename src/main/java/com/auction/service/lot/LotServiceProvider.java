@@ -1,6 +1,6 @@
 package com.auction.service.lot;
 
-import com.auction.dto.LotDto;
+import com.auction.dto.lot.LotDto;
 import java.util.List;
 
 public interface LotServiceProvider {
