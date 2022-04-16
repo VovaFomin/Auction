@@ -1,18 +1,16 @@
-# Auction app
+# Auction Web App
 
 ### Description
 
-Implementation of the backend web application Auction. In the application, you can create lots and place bids on them.
+Allows the creation of lots and placing bids on them.
 
-## Run application locally
+### Run application locally
 
-* Download and Install  `Server-side application` https://github.com/VovaFomin/Auction
+Run with Docker:
 
-* Run docker command: `docker-compose up`
+shell
+```
+docker-compose up
+```
 
-* Visit http://localhost:8090/swagger-ui/#/ 
-
-
-
-Project work in progress.
-
+Visit http://localhost:8090/swagger-ui/#
