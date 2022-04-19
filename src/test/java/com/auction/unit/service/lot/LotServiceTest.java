@@ -1,6 +1,7 @@
 package com.auction.unit.service.lot;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -8,6 +9,8 @@ import static org.mockito.Mockito.when;
 
 import com.auction.dto.lot.LotDto;
 import com.auction.entity.lot.Lot;
+import com.auction.exception.LotNotFoundException;
+import com.auction.exception.UserNotFoundException;
 import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;
 import com.auction.service.lot.LotService;
@@ -75,5 +78,11 @@ public class LotServiceTest {
 
         assertThat(0).isEqualTo(lotRepository.findAll().size());
         verify(lotRepository, times(1)).deleteById(1L);
+    }
+
+    @Test
+    public void getLotById_InvalidLotId_ExceptionThrown() {
+        assertThrows(LotNotFoundException.class,
+                     () -> lotService.getLot(null));
     }
 }
