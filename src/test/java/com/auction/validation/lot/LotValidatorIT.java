@@ -1,14 +1,15 @@
 package com.auction.validation.lot;
 
-import static com.auction.testinstance.TestInstance.getLotDto;
+import static com.auction.testinstance.lot.TestInstanceLot.getLotDto;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.auction.dto.LotDto;
+import com.auction.dto.lot.LotDto;
 import com.auction.exception.LotCannotBeCreatedOrChangedException;
 import com.auction.integration.controller.testcontainer.PostgreSqlContainer;
 import com.auction.repository.lot.LotRepository;
+import com.auction.repository.user.UserRepository;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -46,6 +47,9 @@ class LotValidatorIT {
 
     @MockBean
     private LotRepository lotRepository;
+
+    @MockBean
+    private UserRepository userRepository;
 
     @Container
     public static PostgreSqlContainer postgreSQLContainer = PostgreSqlContainer.getInstance();

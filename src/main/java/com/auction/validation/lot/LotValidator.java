@@ -1,6 +1,6 @@
 package com.auction.validation.lot;
 
-import com.auction.dto.LotDto;
+import com.auction.dto.lot.LotDto;
 import com.auction.exception.LotCannotBeCreatedOrChangedException;
 import java.time.LocalDateTime;
 import java.util.Set;

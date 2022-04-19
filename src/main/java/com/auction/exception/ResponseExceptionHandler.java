@@ -60,4 +60,13 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         log.error("Exception handler: {}", e.getMessages());
         return new ResponseEntity<>(apiError, new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(UserCannotBeCreated.class)
+    protected ResponseEntity<ApiError> handle(UserCannotBeCreated e,
+                                              WebRequest request) {
+        ApiError apiError = new ApiError();
+        apiError.setErrors(e.getMessages());
+        log.error("Exception handler: {}", e.getMessages());
+        return new ResponseEntity<>(apiError, new HttpHeaders(), HttpStatus.BAD_REQUEST);
+    }
 }

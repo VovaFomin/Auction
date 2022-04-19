@@ -1,7 +1,7 @@
 package com.auction.mapper.lot;
 
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

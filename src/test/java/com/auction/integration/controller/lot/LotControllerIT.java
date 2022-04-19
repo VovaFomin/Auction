@@ -1,14 +1,14 @@
 package com.auction.integration.controller.lot;
 
-import static com.auction.testinstance.TestInstance.getLot;
+import static com.auction.testinstance.lot.TestInstanceLot.getLot;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.testcontainers.shaded.org.awaitility.Awaitility.await;
 
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import com.auction.integration.controller.testcontainer.PostgreSqlContainer;
 import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;

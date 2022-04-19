@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: "db/changelog/scripts/init_lot_table.sql"
+  - include:
+      file: "db/changelog/scripts/init_user_table.sql"

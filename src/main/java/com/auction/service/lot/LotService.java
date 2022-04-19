@@ -1,7 +1,7 @@
 package com.auction.service.lot;
 
-import com.auction.dto.LotDto;
-import com.auction.entity.Lot;
+import com.auction.dto.lot.LotDto;
+import com.auction.entity.lot.Lot;
 import com.auction.exception.LotNotFoundException;
 import com.auction.mapper.lot.LotMapper;
 import com.auction.repository.lot.LotRepository;
